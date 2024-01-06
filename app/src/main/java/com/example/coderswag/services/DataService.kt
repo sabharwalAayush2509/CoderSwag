@@ -8,6 +8,18 @@ object DataService {
         Category("SHIRTS", "shirtimage"),
         Category("HOODIES", "hoodieimage"),
         Category("HATS", "hatimage"),
+        Category("DIGITAL", "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS", "hatimage"),
+        Category("DIGITAL", "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS", "hatimage"),
+        Category("DIGITAL", "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS", "hatimage"),
         Category("DIGITAL", "digitalgoodsimage")
     )
 
@@ -32,4 +44,15 @@ object DataService {
         Product("Devslopes Hat White", "$18", "hat3"),
         Product("Devslopes Hat Snapback", "$22", "hat4")
     )
+
+    val digital = listOf<Product>()
+
+    fun getProduct(category: String): List<Product> {
+        return when (category) {
+            "SHIRTS" -> shirts
+            "HOODIES" -> hoodies
+            "HATS" -> hats
+            else -> digital
+        }
+    }
 }
